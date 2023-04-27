@@ -1,22 +1,24 @@
-public class Triangulo implements Cálculos {
+public class Romboide implements Cálculos{
+
+	
 	private String name;
 	private double base;
 	private double altura;
-	private double lado;
-	public Triangulo(String name, double base, double altura, double lado) {
+	public Romboide(String name, double base, double altura) {
+		super();
 		this.name = name;
 		this.base = base;
 		this.altura = altura;
-		this.lado = lado;
-	}//Constructor
+	}//constructor
 	
 	public double calcularArea() {
-		return (getBase() * getAltura())/2;	
+		return 	(getBase()*getAltura());
 	}//calcularArea
 	public double calcularPerimetro() {
-		return (getLado() + getLado() + getLado());
+		return (getBase()+getAltura())*2;
 	}// calcularPerimetro
-		
+
+	
 	public String getName() {
 		return name;
 	}//getName
@@ -41,20 +43,11 @@ public class Triangulo implements Cálculos {
 		this.altura = altura;
 	}//setAltura
 	
-	public double getLado() {
-		return lado;
-	}//getLado
-	
-	public void setLado(double lado) {
-		this.lado = lado;
-	}//setLado
-	
 	@Override
 	public String toString() {
-		return  "\n Triángulo name=" + name +
-				"\n base=" + base +
-				"\n altura=" + altura +
-				"\n lado=" + lado;
-	}//toString
+		return  "\n Romboide name= " + name +
+				"\n base= " + base + 
+				"\n altura= " + altura;
+	}//to String
 	
-}//class Triangulo
+}//class Romboide
